@@ -1,0 +1,1 @@
+Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize:Unlimited | Get-MailboxPermission | select identity,user,accessrights  | where { ($_.User -like '*@*')   }
